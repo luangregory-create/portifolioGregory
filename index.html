@@ -1,133 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroPeças - Peças para Tratores</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Ícones FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AgroForça - Tratores e Maquinários Agrícolas</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Fonte Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Cabeçalho -->
-    <header>
-        <div class="logo">
-            <h1><i class="fa-solid fa-tractor"></i> Agro<span>Peças</span></h1>
+  <!-- Cabeçalho -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">Agro<span>Força</span> 🚜</div>
+      <nav>
+        <a href="#modelos">Modelos</a>
+        <a href="#diferenciais">Diferenciais</a>
+        <a href="#contato" class="btn-nav">Falar no WhatsApp</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Banner Principal -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h1>Potência e Rendimento no Campo</h1>
+      <p>Tratores de alta performance com condições especiais de financiamento. Leve a máxima produtividade para a sua lavoura.</p>
+      <div class="hero-buttons">
+        <a href="https://wa.me/5500999999999?text=Olá,%20tenho%20interesse%20em%20comprar%20um%20trator!" target="_blank" class="btn-primary">Solicitar Cotação Grátis</a>
+        <a href="#modelos" class="btn-secondary">Ver Modelos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Diferenciais -->
+  <section id="diferenciais" class="features">
+    <div class="container grid-3">
+      <div class="feature-card">
+        <h3>⚡ Alta Potência</h3>
+        <p>Motores turbo com economia de combustível e máxima eficiência operacional.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🛠️ Garantia & Peças</h3>
+        <p>Assistência técnica especializada e reposição de peças rápida na sua região.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🌾 Financiamento Facilitado</h3>
+        <p>Aceitamos subsídios agrícolas, trocas e parcelamento direto.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Catálogo de Tratores -->
+  <section id="modelos" class="products">
+    <div class="container">
+      <h2>Nossos Tratores em Destaque</h2>
+      <p class="subtitle">Encontre a máquina ideal para o tamanho do seu hectare</p>
+
+      <div class="grid-3">
+        <!-- Card 1 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1592982537447-6f2a6a0c5c1b?auto=format&fit=crop&w=600&q=80" alt="Trator AgroMax 75HP">
+          <div class="product-info">
+            <h3>AgroMax 75 HP</h3>
+            <p class="specs">Ideal para pequenas e médias propriedades. Econômico e ágil.</p>
+            <span class="price">A partir de R$ 185.000</span>
+            <a href="https://wa.me/5500999999999?text=Quero%20saber%20mais%20sobre%20o%20AgroMax%2075HP" target="_blank" class="btn-card">Tenho Interesse</a>
+          </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#categorias">Categorias</a></li>
-                <li><a href="#produtos">Destaques</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Banner Principal -->
-    <section id="inicio" class="hero">
-        <div class="hero-text">
-            <h2>Peças Agrícolas para a Sua Máquina Não Parar</h2>
-            <p>Linha completa para Jonh Deere, Massey Ferguson, New Holland, Valtra e mais.</p>
-            <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento" class="btn-whatsapp" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i> Fazer Orçamento
-            </a>
+        <!-- Card 2 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1530267981675-7ab2feb880f0?auto=format&fit=crop&w=600&q=80" alt="Trator CampoForte 120HP">
+          <div class="product-info">
+            <h3>CampoForte 120 HP</h3>
+            <p class="specs">Para operações pesadas de arado e plantio. Cabinado com ar-condicionado.</p>
+            <span class="price">A partir de R$ 310.000</span>
+            <a href="https://wa.me/5500999999999?text=Quero%20saber%20mais%20sobre%20o%20CampoForte%20120HP" target="_blank" class="btn-card">Tenho Interesse</a>
+          </div>
         </div>
-    </section>
 
-    <!-- SEÇÃO DE CATEGORIAS EM CÍRCULO -->
-    <section id="categorias" class="secao-categorias">
-        <h2>Nossas Categorias</h2>
-        <p class="subtitulo">Navegue pelas principais famílias de peças</p>
-        
-        <div class="grid-categorias">
-            
-            <!-- Categoria 1 -->
-            <a href="#produtos" class="categoria-item">
-                <div class="circulo-img">
-                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80" alt="Motor">
-                </div>
-                <h3>Motor</h3>
-            </a>
-
-            <!-- Categoria 2 -->
-            <a href="#produtos" class="categoria-item">
-                <div class="circulo-img">
-                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=400&q=80" alt="Hidráulica">
-                </div>
-                <h3>Hidráulica</h3>
-            </a>
-
-            <!-- Categoria 3 -->
-            <a href="#produtos" class="categoria-item">
-                <div class="circulo-img">
-                    <img src="https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?auto=format&fit=crop&w=400&q=80" alt="Transmissão">
-                </div>
-                <h3>Transmissão</h3>
-            </a>
-
-            <!-- Categoria 4 -->
-            <a href="#produtos" class="categoria-item">
-                <div class="circulo-img">
-                    <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=400&q=80" alt="Filtros">
-                </div>
-                <h3>Filtros</h3>
-            </a>
-
-            <!-- Categoria 5 -->
-            <a href="#produtos" class="categoria-item">
-                <div class="circulo-img">
-                    <img src="https://images.unsplash.com/photo-1555680202-c86f0e12f086?auto=format&fit=crop&w=400&q=80" alt="Elétrica">
-                </div>
-                <h3>Elétrica</h3>
-            </a>
-
-            <!-- Categoria 6 -->
-            <a href="#produtos" class="categoria-item">
-                <div class="circulo-img">
-                    <img src="https://images.unsplash.com/photo-1530267981375-f0de937f5f13?auto=format&fit=crop&w=400&q=80" alt="Cabine e Lataria">
-                </div>
-                <h3>Cabine & Lataria</h3>
-            </a>
-
+        <!-- Card 3 -->
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=600&q=80" alt="Trator Titan Heavy 200HP">
+          <div class="product-info">
+            <h3>Titan Heavy 200 HP</h3>
+            <p class="specs">Tecnologia de ponta com piloto automático e GPS integrado.</p>
+            <span class="price">Consulte Condições</span>
+            <a href="https://wa.me/5500999999999?text=Quero%20saber%20mais%20sobre%20o%20Titan%20Heavy" target="_blank" class="btn-card">Tenho Interesse</a>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Catálogo de Produtos em Destaque -->
-    <section id="produtos" class="container">
-        <h2>Produtos em Destaque</h2>
-        <div class="grid-produtos">
+  <!-- Chamada Final (CTA) -->
+  <section id="contato" class="cta-section">
+    <div class="container">
+      <h2>Pronto para renovar sua frota agrícola?</h2>
+      <p>Fale diretamente com um de nossos consultores agro e receba uma proposta personalizada.</p>
+      <a href="https://wa.me/5500999999999?text=Olá,%20gostaria%20de%20receber%20um%20orçamento!" target="_blank" class="btn-whatsapp">
+        💬 Chamar no WhatsApp Agora
+      </a>
+    </div>
+  </section>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1486006920555-c77dce18193b?auto=format&fit=crop&w=400&q=80" alt="Filtros">
-                <h3>Kit de Filtros de Ar</h3>
-                <p>Compatível com diversas marcas de tratores.</p>
-                <a href="https://wa.me/5500000000000?text=Tenho%20interesse%20em%20Filtros" class="btn-card" target="_blank">Consultar Preço</a>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=400&q=80" alt="Bomba Hidráulica">
-                <h3>Bomba Hidráulica</h3>
-                <p>Alta vazão e durabilidade para serviços pesados.</p>
-                <a href="https://wa.me/5500000000000?text=Tenho%20interesse%20em%20Bombas" class="btn-card" target="_blank">Consultar Preço</a>
-            </div>
-
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80" alt="Kits de Motor">
-                <h3>Kit Reparo de Motor</h3>
-                <p>Pistões, anéis e camisas de altíssima resistência.</p>
-                <a href="https://wa.me/5500000000000?text=Tenho%20interesse%20em%20Kits" class="btn-card" target="_blank">Consultar Preço</a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Rodapé -->
-    <footer id="contato">
-        <p>&copy; 2026 AgroPeças - Peças para Tratores e Máquinas Agrícolas.</p>
-        <p>Atendimento rápido via WhatsApp: (00) 90000-0000</p>
-    </footer>
+  <!-- Rodapé -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 AgroForça Máquinas Agrícolas. Todos os direitos reservados.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
