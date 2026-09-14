@@ -1,108 +1,43 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroMaq - Guia de Tratores & Investimentos</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #f4f6f8; color: #333; line-height: 1.6; }
-        header { background: #1b4332; color: #fff; padding: 2rem 1rem; text-align: center; }
-        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.1rem; opacity: 0.9; }
-        nav { background: #2d6a4f; padding: 0.8rem; text-align: center; }
-        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: 600; }
-        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
-        .hero-img { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; }
-        .section-title { font-size: 1.8rem; color: #1b4332; margin-bottom: 1rem; border-bottom: 3px solid #52b788; display: inline-block; padding-bottom: 5px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
-        .card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; }
-        .card h3 { color: #2d6a4f; margin-bottom: 0.5rem; }
-        table { width: 100%; border-collapse: collapse; background: #fff; margin-bottom: 3rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
-        th { background-color: #2d6a4f; color: white; }
-        footer { background: #1b4332; color: #fff; text-align: center; padding: 1.5rem; margin-top: 3rem; }
-    </style>
-</head>
-<body>
+<script setup>
+import { ref, computed } from 'vue';
 
-    <header>
-        <h1>AgroMaq</h1>
-        <p>O Portal de Informações Sobre Tratores, Marcas e Investimentos Agrícolas</p>
-    </header>
+const search = ref('');
+const brands = ref([
+  { id: 1, name: 'John Deere', tag: 'Tecnologia', desc: 'Sistemas avançados de piloto automático e inteligência de dados.' },
+  { id: 2, name: 'New Holland', tag: 'Polivalência', desc: 'Facilidade no manuseio e ótima eficiência operacional.' },
+  { id: 3, name: 'Massey Ferguson', tag: 'Tradição', desc: 'Mecânica simples, resistente e altamente confiável.' }
+]);
 
-    <nav>
-        <a href="#marcas">Marcas</a>
-        <a href="#valores">Valores</a>
-        <a href="#investir">Por Que Investir</a>
-    </nav>
+const filteredBrands = computed(() => {
+  return brands.value.filter(b => b.name.toLowerCase().includes(search.value.toLowerCase()));
+});
+</script>
 
-    <div class="container">
-        <img src="watermarked_img_17352619930979695501.jpg" alt="Trator no Campo" class="hero-img">
+<template>
+  <div class="container">
+    <h1>🚜 Catálogo de Tratores & Marcas</h1>
+    
+    <input 
+      v-model="search" 
+      type="text" 
+      placeholder="Buscar marca (ex: John Deere)..." 
+      class="search-input"
+    />
 
-        <h2 id="marcas" class="section-title">Principais Marcas no Mercado</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>John Deere</h3>
-                <p>Líder global em inteligência de dados, telemetria e tratores de alta produtividade.</p>
-            </div>
-            <div class="card">
-                <h3>New Holland</h3>
-                <p>Referência em custo-benefício e facilidade de operação para médias e pequenas lavouras.</p>
-            </div>
-            <div class="card">
-                <h3>Massey Ferguson</h3>
-                <p>Tradição no Brasil com motores eficientes, baixa manutenção e excelente valor de revenda.</p>
-            </div>
-        </div>
-
-        <h2 id="valores" class="section-title">Estimativa de Valores</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Categoria</th>
-                    <th>Potência</th>
-                    <th>Valor Médio (Novo)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Utilitário</td>
-                    <td>50 a 75 cv</td>
-                    <td>R$ 150.000 — R$ 280.000</td>
-                </tr>
-                <tr>
-                    <td>Médio Porte</td>
-                    <td>80 a 140 cv</td>
-                    <td>R$ 300.000 — R$ 550.000</td>
-                </tr>
-                <tr>
-                    <td>Pesado / Alta Potência</td>
-                    <td>150 a 350+ cv</td>
-                    <td>R$ 600.000 — R$ 1.800.000+</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h2 id="investir" class="section-title">Por Que Investir em Tratores Modernos?</h2>
-        <div class="grid">
-            <div class="card">
-                <img src="watermarked_img_7483320058133664578.jpg" alt="Trator trabalhando">
-                <h3>Produtividade e Agilidade</h3>
-                <p>Otimize o tempo de preparo de solo e plantio, reduzindo dependência de mão de obra e riscos de perda da janela agrícola.</p>
-            </div>
-            <div class="card">
-                <img src="watermarked_img_8239806798962758186.jpg" alt="Agricultura de precisão">
-                <h3>Tecnologia e Economia</h3>
-                <p>Sistemas com GPS evitam sobreposição, reduzindo em até 15% o consumo de sementes, combustível e defensivos.</p>
-            </div>
-        </div>
+    <div class="card-grid">
+      <div v-for="brand in filteredBrands" :key="brand.id" class="card">
+        <span class="tag">{{ brand.tag }}</span>
+        <h3>{{ brand.name }}</h3>
+        <p>{{ brand.desc }}</p>
+      </div>
     </div>
+  </div>
+</template>
 
-    <footer>
-        <p>&copy; 2026 AgroMaq - Guia do Agronegócio. Todos os direitos reservados.</p>
-    </footer>
-
-</body>
-</html>
+<style scoped>
+.container { max-width: 900px; margin: 0 auto; padding: 20px; font-family: sans-serif; }
+.search-input { width: 100%; padding: 12px; margin-bottom: 20px; border-radius: 8px; border: 1px solid #ccc; }
+.card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px; }
+.card { background: #f9f9f9; padding: 16px; border-radius: 10px; border: 1px solid #eee; }
+.tag { background: #2e7d32; color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; }
+</style>
