@@ -1,29 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-BR"
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AgroPeças - Peças para Tratores e Máquinas Agrícolas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-<main>
-        <div class="passo ativo" id="passo-0">
-            <p>Um dia desses, dentro de um livro da biblioteca da escola, descobri uma carta antiga sobre uma cidade perdida, escondida por riquezas e belezas naturais. Nessa carta, a autora deixa algumas pistas para encontrar essa cidade e eu decidi segui-las!</p>
-            <button class="btn-proximo" data-proximo="1">Rio de Janeiro</button>
-            <button class="btn-proximo" data-proximo="2">Pernambuco</button>
+
+    <!-- Cabeçalho -->
+    <header>
+        <div class="logo">
+            <h1><i class="fa-solid fa-tractor"></i> Agro<span>Peças</span></h1>
         </div>
-        <div class="passo" id="passo-1">
-            <p>Você começa sua jornada no Rio de Janeiro, subindo o Pico da Tijuca ao amanhecer para encontrar a primeira pista.</p>
-            <button class="btn-proximo" data-proximo="3">Procurar a pista no topo do pico</button>
-            <button class="btn-proximo" data-proximo="4">Desistir e voltar para casa</button>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner Principal -->
+    <section id="inicio" class="hero">
+        <div class="hero-text">
+            <h2>Peças de Qualidade para o seu Trator não Parar!</h2>
+            <p>Linha completa para Jonh Deere, Massey Ferguson, New Holland, Valtra e mais.</p>
+            <a href="https://wa.me/5500000000000?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento" class="btn-whatsapp" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> Fazer Orçamento
+            </a>
         </div>
+    </section>
 
+    <!-- Catálogo de Produtos -->
+    <section id="produtos" class="container">
+        <h2>Nossas Peças Principais</h2>
+        <div class="grid-produtos">
 
+            <!-- Produto 1 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Filtro+de+Óleo" alt="Filtro de Óleo">
+                <h3>Filtros de Óleo e Ar</h3>
+                <p>Alta filtragem para prolongar a vida útil do motor.</p>
+                <a href="https://wa.me/5500000000000?text=Tenho%20interesse%20em%20Filtros" class="btn-card" target="_blank">Consultar Preço</a>
+            </div>
 
-    </main>
-        
-        
-        
-        
+            <!-- Produto 2 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Bomba+Hidráulica" alt="Bomba Hidráulica">
+                <h3>Bombas Hidráulicas</h3>
+                <p>Pressão e vazão ideais para o sistema hidráulico.</p>
+                <a href="https://wa.me/5500000000000?text=Tenho%20interesse%20em%20Bombas" class="btn-card" target="_blank">Consultar Preço</a>
+            </div>
+
+            <!-- Produto 3 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Correias+e+Tensores" alt="Correias">
+                <h3>Correias e Tensores</h3>
+                <p>Resistência para aguentar o trabalho pesado no campo.</p>
+                <a href="https://wa.me/5500000000000?text=Tenho%20interesse%20em%20Correias" class="btn-card" target="_blank">Consultar Preço</a>
+            </div>
+
+            <!-- Produto 4 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/300x200?text=Kits+de+Motor" alt="Kits de Motor">
+                <h3>Kits de Reparo de Motor</h3>
+                <p>Pistões, anéis e juntas para manutenção preventiva ou corretiva.</p>
+                <a href="https://wa.me/5500000000000?text=Tenho%20interesse%20em%20Kits" class="btn-card" target="_blank">Consultar Preço</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="sobre">
+        <h2>Sobre a AgroPeças</h2>
+        <p>Somos especialistas no fornecimento de componentes e peças de reposição para tratores e colheitadeiras. Entregamos para todo o Brasil com rapidez e garantia.</p>
+    </section>
+
+    <!-- Rodapé -->
+    <footer id="contato">
+        <p>&copy; 2026 AgroPeças - Todos os direitos reservados.</p>
+        <p>Atendimento rápido via WhatsApp: (00) 90000-0000</p>
+    </footer>
+
 </body>
 </html>
