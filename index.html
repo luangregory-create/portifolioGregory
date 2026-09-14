@@ -1,4 +1,4 @@
-<!-- Seção Marcas e Promoções -->
+<!-- Seção Marcas e Promoções com Imagem -->
 <section class="brand-section">
   <div class="container">
     <h2 class="title-center">Promoções por Marca</h2>
@@ -6,8 +6,8 @@
       
       <!-- Círculo 1 -->
       <div class="circle-card">
-        <div class="circle-badge jd">
-          <span>John Deere</span>
+        <div class="circle-badge">
+          <img src="SUA_IMAGEM_JOHN_DEERE.jpg" alt="John Deere">
         </div>
         <h3>John Deere</h3>
         <p class="promo-tag">🔥 12x Sem Juros</p>
@@ -16,8 +16,8 @@
 
       <!-- Círculo 2 -->
       <div class="circle-card">
-        <div class="circle-badge mf">
-          <span>Massey Ferguson</span>
+        <div class="circle-badge">
+          <img src="SUA_IMAGEM_MASSEY.jpg" alt="Massey Ferguson">
         </div>
         <h3>Massey Ferguson</h3>
         <p class="promo-tag">🚚 Frete Grátis</p>
@@ -26,8 +26,8 @@
 
       <!-- Círculo 3 -->
       <div class="circle-card">
-        <div class="circle-badge nh">
-          <span>New Holland</span>
+        <div class="circle-badge">
+          <img src="SUA_IMAGEM_NEW_HOLLAND.jpg" alt="New Holland">
         </div>
         <h3>New Holland</h3>
         <p class="promo-tag">💰 Bônus de Troca</p>
@@ -36,8 +36,8 @@
 
       <!-- Círculo 4 -->
       <div class="circle-card">
-        <div class="circle-badge valtra">
-          <span>Valtra</span>
+        <div class="circle-badge">
+          <img src="SUA_IMAGEM_VALTRA.jpg" alt="Valtra">
         </div>
         <h3>Valtra</h3>
         <p class="promo-tag">🌾 Carência de 180 dias</p>
@@ -47,44 +47,17 @@
     </div>
   </div>
 </section>
-/* Estilos dos Círculos e Promoções */
-.brand-section {
-  padding: 60px 0;
-  background-color: #ffffff;
-}
-
-.title-center {
-  text-align: center;
-  font-size: 32px;
-  color: #1b4332;
-  margin-bottom: 40px;
-}
-
-.circle-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
-  text-align: center;
-}
-
-.circle-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
+/* Atualização do CSS para ajustar a imagem dentro do círculo */
 .circle-badge {
-  width: 130px;
-  height: 130px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
-  font-weight: 800;
-  font-size: 14px;
-  text-align: center;
-  padding: 10px;
+  background-color: #ffffff;
+  border: 4px solid #1b4332;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   margin-bottom: 15px;
   transition: transform 0.3s ease;
@@ -94,30 +67,8 @@
   transform: scale(1.08);
 }
 
-/* Cores das Marcas */
-.jd { background: radial-gradient(circle, #367c2b 0%, #174210 100%); }
-.mf { background: radial-gradient(circle, #cc0000 0%, #800000 100%); }
-.nh { background: radial-gradient(circle, #003399 0%, #001f66 100%); }
-.valtra { background: radial-gradient(circle, #d42e12 0%, #8b1d0a 100%); }
-
-.circle-card h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
-  color: #222;
-}
-
-.promo-tag {
-  background-color: #fff3cd;
-  color: #856404;
-  font-weight: 700;
-  font-size: 13px;
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin-bottom: 8px;
-  display: inline-block;
-}
-
-.promo-desc {
-  font-size: 13px;
-  color: #666;
+.circle-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Use 'contain' se a imagem for uma logo com fundo transparente */
 }
