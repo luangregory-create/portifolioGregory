@@ -1,74 +1,108 @@
-<!-- Seção Marcas e Promoções com Imagem -->
-<section class="brand-section">
-  <div class="container">
-    <h2 class="title-center">Promoções por Marca</h2>
-    <div class="circle-grid">
-      
-      <!-- Círculo 1 -->
-      <div class="circle-card">
-        <div class="circle-badge">
-          <img src="SUA_IMAGEM_JOHN_DEERE.jpg" alt="John Deere">
-        </div>
-        <h3>John Deere</h3>
-        <p class="promo-tag">🔥 12x Sem Juros</p>
-        <p class="promo-desc">Taxa 0% no financiamento ou 5% de desconto à vista.</p>
-      </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroMaq - Guia de Tratores & Investimentos</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f4f6f8; color: #333; line-height: 1.6; }
+        header { background: #1b4332; color: #fff; padding: 2rem 1rem; text-align: center; }
+        header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        nav { background: #2d6a4f; padding: 0.8rem; text-align: center; }
+        nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: 600; }
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem; }
+        .hero-img { width: 100%; height: 400px; object-fit: cover; border-radius: 12px; margin-bottom: 2rem; }
+        .section-title { font-size: 1.8rem; color: #1b4332; margin-bottom: 1rem; border-bottom: 3px solid #52b788; display: inline-block; padding-bottom: 5px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin-bottom: 3rem; }
+        .card { background: #fff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem; }
+        .card h3 { color: #2d6a4f; margin-bottom: 0.5rem; }
+        table { width: 100%; border-collapse: collapse; background: #fff; margin-bottom: 3rem; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #2d6a4f; color: white; }
+        footer { background: #1b4332; color: #fff; text-align: center; padding: 1.5rem; margin-top: 3rem; }
+    </style>
+</head>
+<body>
 
-      <!-- Círculo 2 -->
-      <div class="circle-card">
-        <div class="circle-badge">
-          <img src="SUA_IMAGEM_MASSEY.jpg" alt="Massey Ferguson">
-        </div>
-        <h3>Massey Ferguson</h3>
-        <p class="promo-tag">🚚 Frete Grátis</p>
-        <p class="promo-desc">Entrega na sua propriedade + 1ª revisão gratuita.</p>
-      </div>
+    <header>
+        <h1>AgroMaq</h1>
+        <p>O Portal de Informações Sobre Tratores, Marcas e Investimentos Agrícolas</p>
+    </header>
 
-      <!-- Círculo 3 -->
-      <div class="circle-card">
-        <div class="circle-badge">
-          <img src="SUA_IMAGEM_NEW_HOLLAND.jpg" alt="New Holland">
-        </div>
-        <h3>New Holland</h3>
-        <p class="promo-tag">💰 Bônus de Troca</p>
-        <p class="promo-desc">Receba até R$ 20.000 de bônus ao entregar seu usado.</p>
-      </div>
+    <nav>
+        <a href="#marcas">Marcas</a>
+        <a href="#valores">Valores</a>
+        <a href="#investir">Por Que Investir</a>
+    </nav>
 
-      <!-- Círculo 4 -->
-      <div class="circle-card">
-        <div class="circle-badge">
-          <img src="SUA_IMAGEM_VALTRA.jpg" alt="Valtra">
-        </div>
-        <h3>Valtra</h3>
-        <p class="promo-tag">🌾 Carência de 180 dias</p>
-        <p class="promo-desc">Comece a pagar somente após a próxima colheita.</p>
-      </div>
+    <div class="container">
+        <img src="watermarked_img_17352619930979695501.jpg" alt="Trator no Campo" class="hero-img">
 
+        <h2 id="marcas" class="section-title">Principais Marcas no Mercado</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>John Deere</h3>
+                <p>Líder global em inteligência de dados, telemetria e tratores de alta produtividade.</p>
+            </div>
+            <div class="card">
+                <h3>New Holland</h3>
+                <p>Referência em custo-benefício e facilidade de operação para médias e pequenas lavouras.</p>
+            </div>
+            <div class="card">
+                <h3>Massey Ferguson</h3>
+                <p>Tradição no Brasil com motores eficientes, baixa manutenção e excelente valor de revenda.</p>
+            </div>
+        </div>
+
+        <h2 id="valores" class="section-title">Estimativa de Valores</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Potência</th>
+                    <th>Valor Médio (Novo)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Utilitário</td>
+                    <td>50 a 75 cv</td>
+                    <td>R$ 150.000 — R$ 280.000</td>
+                </tr>
+                <tr>
+                    <td>Médio Porte</td>
+                    <td>80 a 140 cv</td>
+                    <td>R$ 300.000 — R$ 550.000</td>
+                </tr>
+                <tr>
+                    <td>Pesado / Alta Potência</td>
+                    <td>150 a 350+ cv</td>
+                    <td>R$ 600.000 — R$ 1.800.000+</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 id="investir" class="section-title">Por Que Investir em Tratores Modernos?</h2>
+        <div class="grid">
+            <div class="card">
+                <img src="watermarked_img_7483320058133664578.jpg" alt="Trator trabalhando">
+                <h3>Produtividade e Agilidade</h3>
+                <p>Otimize o tempo de preparo de solo e plantio, reduzindo dependência de mão de obra e riscos de perda da janela agrícola.</p>
+            </div>
+            <div class="card">
+                <img src="watermarked_img_8239806798962758186.jpg" alt="Agricultura de precisão">
+                <h3>Tecnologia e Economia</h3>
+                <p>Sistemas com GPS evitam sobreposição, reduzindo em até 15% o consumo de sementes, combustível e defensivos.</p>
+            </div>
+        </div>
     </div>
-  </div>
-</section>
-/* Atualização do CSS para ajustar a imagem dentro do círculo */
-.circle-badge {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #ffffff;
-  border: 4px solid #1b4332;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  margin-bottom: 15px;
-  transition: transform 0.3s ease;
-}
 
-.circle-badge:hover {
-  transform: scale(1.08);
-}
+    <footer>
+        <p>&copy; 2026 AgroMaq - Guia do Agronegócio. Todos os direitos reservados.</p>
+    </footer>
 
-.circle-badge img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Use 'contain' se a imagem for uma logo com fundo transparente */
-}
+</body>
+</html>
